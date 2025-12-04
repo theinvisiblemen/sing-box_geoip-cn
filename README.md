@@ -1,12 +1,12 @@
-# 🌏 One-GeoIP
+# 🌏 sing-box GeoIP CN
 
 🚀 基于 [china-operator-ip](https://github.com/gaoyifan/china-operator-ip) 项目
 
-每天自动生成适用于 [sing-box](https://github.com/SagerNet/sing-box) 的中国 IP 规则集
+每日自动生成适用于 [sing-box](https://github.com/SagerNet/sing-box) 的中国 IP 规则集。
 
 ## 📦 规则集地址
 
-包含 ipv4 和 ipv6
+包含 IPv4 和 IPv6
 
 ✨ 规则集文件下载地址：
 ```
