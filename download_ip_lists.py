@@ -21,7 +21,7 @@ def main():
     # 创建临时目录
     os.makedirs("temp", exist_ok=True)
     
-    # 下载IPv4和IPv6列表
+    # 下载 IPv4 和 IPv6 列表
     ipv4_url = "https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china.txt"
     ipv6_url = "https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china6.txt"
     
@@ -46,7 +46,7 @@ def main():
             except Exception as e:
                 print(f"处理文件 {infile} 时出错: {e}")
     
-    print(f"已合并IP列表到 {output_file}")
+    print(f"已合并 IP 列表到 {output_file}")
 
 if __name__ == "__main__":
     main()
