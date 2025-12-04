@@ -5,17 +5,17 @@ import subprocess
 import shutil
 
 def download_singbox():
-    """下载并解压sing-box工具"""
+    """下载并解压 sing-box 工具"""
     try:
         # 创建临时目录
         os.makedirs("temp", exist_ok=True)
         
-        # 固定使用Linux AMD64版本
-        version = "1.11.5"
+        # 固定使用 Linux AMD64 版本
+        version = "1.12.12"
         url = f"https://github.com/SagerNet/sing-box/releases/download/v{version}/sing-box-{version}-linux-amd64.tar.gz"
         output_file = "temp/sing-box.tar.gz"
         
-        print(f"正在下载sing-box: {url}")
+        print(f"正在下载 sing-box: {url}")
         
         # 下载文件
         response = requests.get(url, stream=True)
@@ -26,35 +26,35 @@ def download_singbox():
                 f.write(chunk)
         
         # 解压文件
-        print("正在解压sing-box")
+        print("正在解压 sing-box")
         with tarfile.open(output_file, 'r:gz') as tar:
             tar.extractall(path="temp")
         
         # 移动二进制文件
         binary_name = "sing-box"
-        extracted_dir = "temp/sing-box-1.11.5-linux-amd64"
+        extracted_dir = "temp/sing-box-1.12.12-linux-amd64"
         shutil.copy(f"{extracted_dir}/{binary_name}", binary_name)
         
         # 修改权限使其可执行
         os.chmod(binary_name, 0o755)
         
-        print(f"已准备好sing-box: {binary_name}")
+        print(f"已准备好 sing-box: {binary_name}")
         return binary_name
         
     except Exception as e:
-        print(f"下载或解压sing-box时出错: {e}")
+        print(f"下载或解压 sing-box 时出错: {e}")
         return None
 
 def compile_ruleset(binary_name):
-    """使用sing-box编译规则集"""
+    """使用 sing-box 编译规则集"""
     try:
-        # 检查规则集JSON是否存在
-        if not os.path.exists("one-china.json"):
-            print("错误: one-china.json 文件不存在")
+        # 检查规则集 JSON 是否存在
+        if not os.path.exists("cn.json"):
+            print("错误: cn.json 文件不存在")
             return False
         
         # 构建命令
-        cmd = [f"./{binary_name}", "rule-set", "compile", "one-china.json"]
+        cmd = [f"./{binary_name}", "rule-set", "compile", "cn.json"]
         
         # 运行命令
         print(f"正在编译规则集: {' '.join(cmd)}")
@@ -64,7 +64,7 @@ def compile_ruleset(binary_name):
             print(f"编译失败: {result.stderr}")
             return False
             
-        print(f"规则集编译成功: one-china.srs")
+        print(f"规则集编译成功: cn.srs")
         return True
         
     except Exception as e:
@@ -72,7 +72,7 @@ def compile_ruleset(binary_name):
         return False
 
 def main():
-    # 下载sing-box
+    # 下载 sing-box
     binary_name = download_singbox()
     if not binary_name:
         return
