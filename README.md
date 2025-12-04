@@ -10,7 +10,7 @@
 
 ✨ 规则集文件下载地址：
 ```
-https://raw.githubusercontent.com/OneOhCloud/one-geoip/rule-set/one-china.srs
+https://raw.githubusercontent.com/theinvisiblemen/sing-box_geoip-cn/rule-set/one-china.srs
 ```
 
 ## 🔧 使用方法
