@@ -30,7 +30,7 @@ def create_ruleset_json():
         
         # 保存到文件
         with open("cn.json", 'w') as f:
-            json.dump(ruleset, f, indent=4)
+            json.dump(ruleset, f, indent=2)
         
         print(f"已创建规则集 JSON 文件: cn.json，包含 {len(ip_cidrs)} 条 IP 规则")
         return True
