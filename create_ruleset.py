@@ -20,7 +20,7 @@ def create_ruleset_json():
         
         # 创建规则集 JSON 结构
         ruleset = {
-            "version": 3,
+            "version": 2,
             "rules": [
                 {
                     "ip_cidr": ip_cidrs
