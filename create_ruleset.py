@@ -2,16 +2,16 @@ import json
 import os
 
 def create_ruleset_json():
-    """读取 china.txt 文件并创建 sing-box 规则集 JSON 文件"""
+    """读取 cn.txt 文件并创建 sing-box 规则集 JSON 文件"""
     try:
-        # 检查 china.txt 是否存在
-        if not os.path.exists("china.txt"):
-            print("错误: china.txt 文件不存在")
+        # 检查 cn.txt 是否存在
+        if not os.path.exists("cn.txt"):
+            print("错误: cn.txt 文件不存在")
             return False
         
         # 读取 IP 地址列表
         ip_cidrs = []
-        with open("china.txt", 'r') as f:
+        with open("cn.txt", 'r') as f:
             for line in f:
                 # 去掉首尾空格
                 line = line.strip()
