@@ -19,7 +19,7 @@ def download_file(url, output_file):
 def main():
     # 直接下载合并好的列表
     china_url = "https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china46.txt"
-    output_file = "china.txt"
+    output_file = "cn.txt"
     
     download_file(china_url, output_file)
 
