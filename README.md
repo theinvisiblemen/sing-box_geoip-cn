@@ -1,5 +1,7 @@
 # 🌏 sing-box GeoIP CN
 
+[![Update China IP Rule Set](https://github.com/theinvisiblemen/sing-box_geoip-cn/actions/workflows/update-ruleset.yml/badge.svg)](https://github.com/theinvisiblemen/sing-box_geoip-cn/actions/workflows/update-ruleset.yml)
+
 🚀 基于 [china-operator-ip](https://github.com/gaoyifan/china-operator-ip) 项目
 
 每日自动生成适用于 [sing-box](https://github.com/SagerNet/sing-box) 的中国 IP 规则集。
